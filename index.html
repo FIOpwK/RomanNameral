@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="index.css">
 
 </head>
-<body>
+<body id="root">
 <button id="submit" onclick="subScore()">Click to Play</button>
 
 <h1>Roman Nameral II</h1>
@@ -14,9 +14,8 @@
 <p2>Play to see</p2>
 <span class="weight"></span>
 <script>
+
     function subScore() {
-
-
         const obj = {
             X: 10,
             M: 1000,
@@ -28,29 +27,24 @@
             Q: 5,
             S: 10,
             Y: 5000
-        }
-
+        };
         const keys = Object.keys(obj);
         const vals = Object.values(obj);
+        let name = window.prompt('Enter a name to see its weight: ');
         let total = 0;
-
-
-        let name = window.prompt('Enter a name to see its weight: ')
         let score = 0;
+
         keys.map((k, v) => {
-            if (name.toUpperCase().includes(k)) {
-                total = score += (name.toUpperCase().split(k).length - 1) * vals[v];
+            name.toUpperCase().includes(k) ?
+                total = score += (name.toUpperCase().split(k).length - 1) * vals[v] : !total;
                 return total;
 
-            }
         });
         // const p2 = document.getElementByTagName('p2');
         // p2.textContent = 'Weight is: '
         const weight = document.querySelector('.weight');
         weight.classList.add('weight');
         weight.textContent = total;
-
-
 
     }
 
