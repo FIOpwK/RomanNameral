@@ -1,0 +1,34 @@
+body{
+    background-color: crimson;
+    text-align: center;
+}
+
+input{
+    border-color: purple;
+    border-style: outset;
+    padding: 1px, solid;
+}
+
+h1{
+    color: darkgoldenrod;
+}
+
+p{
+    color: goldenrod;
+    font-size: 200%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+p2{
+    color: indigo;
+    font-size: 200%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.weight {
+    color: white;
+    background-color: indigo;
+    font-size: 200%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+}
